@@ -56,6 +56,18 @@ public class YSHM {
 				}
 				
 			}else if(user_input==4) {
+				int max = 0;
+				int min = 100;
+				for (Integer score : exams) {
+					if(score>max) max = score;
+					if(score<min) min = score;
+				}
+				int maxIdx = exams.indexOf(max);
+				int minIdx = exams.indexOf(min);
+				System.out.println("최고점:"+exams.get(maxIdx)+", 득점자: "+names.get(maxIdx));
+				System.out.println("최고점:"+exams.get(minIdx)+", 득점자: "+names.get(minIdx));
+				System.out.println();
+				
 			}else if(user_input==5) {
 				System.out.println();
 				System.out.println("프로그램을 종료합니다");
